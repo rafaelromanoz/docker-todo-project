@@ -1,14 +1,14 @@
 version: "3"
 services:
     tests:
-      image: "./todo-app/tests/Dockerfile"
+      build: ./todo-app/tests
       depends_on:
         - "back-end"
         - "front-end"
       environment:
         - FRONT_HOST=todofrontend
     front-end:
-      image: "./todo-app/front-end/Dockerfile"
+      build: ./todo-app/front-end
       ports:
         - 3000
       environment:
@@ -16,6 +16,6 @@ services:
       depends_on:
         - "back-end"
     back-end:
-      image: "./todo-app/back-end/Dockerfile"
+      build: ./todo-app/back-end
       ports:
         - 3001
