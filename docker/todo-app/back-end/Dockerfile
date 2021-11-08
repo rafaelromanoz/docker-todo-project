@@ -8,8 +8,8 @@ COPY ["./package*.json",  "./"]
 
 EXPOSE 3001
 
-COPY ["./", "./"]
-
 RUN ["npm", "install"]
+
+COPY ["./", "./"]
 
 ENTRYPOINT [ "npm","start" ]
