@@ -1,5 +1,7 @@
 FROM node:alpine
 
+WORKDIR /app
+
 ADD ["./node_modules.tar.gz", "./"]
 
 COPY ["./package.json", "./package-lock.json", "./"]
