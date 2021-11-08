@@ -1,6 +1,4 @@
-FROM node:14-alpine AS todofront
-
-WORKDIR /app
+FROM node:alpine
 
 ADD ["./node_modules.tar.gz", "./"]
 
