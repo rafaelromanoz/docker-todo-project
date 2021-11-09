@@ -4,10 +4,8 @@ WORKDIR /app
 
 ADD ["./node_modules.tar.gz", "./"]
 
-COPY ["./package.json", "./package-lock.json", "./"]
-
 EXPOSE 3000
 
-COPY ["./", "./"]
+COPY . .
 
 ENTRYPOINT [ "npm", "start" ]
